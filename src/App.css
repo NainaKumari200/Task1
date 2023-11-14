@@ -1,0 +1,458 @@
+.App {
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.add-task-button {
+  background-color: #6d058f; /* Replace with your preferred color code */
+  color: white; /* Text color */
+  font-weight: bolder;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.left-panel {
+  flex: left;
+  padding: 20px;
+  margin-left: 80PX;
+}
+
+.right-panel {
+  padding: 20px;
+  margin-top: 30px;
+  margin-right: 140PX;
+}
+
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #b4b2b2;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 70px;
+  width: 1000px;
+}
+
+.task-details {
+  display: flex;
+  align-items: center;
+}
+
+.priority {
+  margin-left: 10px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.priority-high {
+  background-color: white;
+  color: red;
+}
+
+.priority-medium {
+  background-color: white;
+  color: orange;
+}
+
+.priority-low {
+  background-color: white;
+  color: green;
+}
+
+.status {
+  margin-left: 10px;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.status-to-do, .status-done, .status-in-progress {
+  background-color: rgb(239, 237, 232);
+  color: rgb(98, 91, 91);
+  border-radius: 10px;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  margin-left: 10px;
+}
+.task-item {
+  display: flex;
+  align-items: center;
+}
+
+.process-status {
+  margin-right: 5px; /* Adjust the margin value as needed */
+}
+
+.edit {
+  margin-left: 25px; /* Adjust the margin value as needed */
+}
+
+.del {
+  margin-left: 5px; /* Adjust the margin value as needed */
+}
+
+.delete-confirmations {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modals {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  width: 800px;
+}
+
+.modal-contents {
+  padding: 20px;
+}
+
+.modal-headers {
+  text-align: center;
+}
+
+.modal-titles {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.modal-footers {
+  display: flex;
+  justify-content: flex-center;
+  margin-top: 20px;
+}
+
+.cancel-buttons {
+  background-color: #fff;
+  color: #8e8989;
+  padding: 20px 35px;
+  border-color: #8e8989;
+  margin-left: 50px;  
+  margin-right: 50px ;
+  margin-top: 10px;  
+  font-weight: bold;
+  border-radius: 14px;
+  margin-right: 10px;
+}
+
+.delete-buttons {
+  background-color: #6d058f;;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px 35px;
+  margin-right: 20px;
+  margin-left: 240px;
+margin-top: 10px;  
+  border: none;
+  border-radius: 14px;
+}
+
+
+
+
+
+
+.edit-confirmation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 420px;
+  width: 800px;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left ;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.modal-body label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #352f2f;
+}
+
+.modal-body input {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.modal-body select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.cancel-button {
+  background-color: #fff;
+  color: #8e8989;
+  padding: 5px 15px;
+  border: 2px solid #8e8989;
+  border-radius: 14px;
+  margin: 0 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close{
+  margin-top: 20px;
+  align-items: right;
+  margin-left: 600px;
+}
+
+.x{display: flex;}
+
+.y{margin-bottom: 5px;}
+
+.save-button {
+  background-color: #6d058f;
+  color: #fff;
+  padding: 20px 35px;
+  border: none;
+  border-radius: 14px;
+  margin-top: 40px;
+  margin-left:  550px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+/* Priority buttons container */
+.priority-buttons {
+  display: flex;
+  gap: 20px; /* Adjust the gap between buttons as needed */
+  margin-top: 20px;
+}
+
+/* Priority buttons */
+.priority-button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hover state */
+.priority-button:hover {
+  background-color: rgb(138, 119, 248); /* Background color on hover */
+  color:  white; /* Text color on hover */
+}
+
+/* Active state (when clicked) */
+.priority-button:active {
+  background-color: red; /* Background color when clicked */
+  color: white; /* Text color when clicked */
+}
+
+/* Styling for 'High' priority */
+.priority-button.high {
+  background-color: red;
+  color: white;
+  border-color: red;
+}
+
+/* Styling for 'Medium' priority */
+.priority-button.medium {
+  background-color: orange;
+  color: white;
+  border-color: orange;
+}
+
+/* Styling for 'Low' priority */
+.priority-button.low {
+  background-color: green;
+  color: white;
+  border-color: green;
+}
+
+
+/* AddTask Form Styles */
+.add-task-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.add-task-form label {
+  font-weight: bold;
+}
+
+.add-task-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-task-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-task-form button:hover {
+  background-color: #0056b3;
+}
+
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top: 2px solid #6d058f; /* Change color based on your design */
+  animation: spin 1s linear infinite;
+}
+
+.empty-spinner {
+  border: 2px solid #ccc;
+}
+
+.half-spinner {
+  clip-path: polygon(0% 0%, 0% 50%, 100% 50%, 100% 0%);
+
+  border: 2px solid #6d058f;
+}
+
+.full-spinner {
+  border: 2px solid #6d058f;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ab{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 10px;
+}
+
+.abc{
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.abcd{
+  
+  
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  gap: 15px;
+  
+}
+
+.grey{
+  color: #b4b2b2;
+}
